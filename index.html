@@ -2,35 +2,73 @@
 <!--
 Name: Kelvin Saldana
 Date Created: 01/12/2024
-Most recent revision: 01/12/2024
+Most recent revision: 05/05/2024
  -->
 <html>
     <head>
         <title>Kelvin's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mediaqueries.css">
     </head>
     <body>
-
-        <h1>Portfolio for Kelvin Saldana</h1>
-
-        <hr>
-        <!-- We need to add links to projects.html, contact.html, and testimonials.html -->
-        <p>Links to our pages will go here</p>
-
-        <hr>
-
-        <h2><em>About Me</em></h2>
-        <p>Paragraph 1 about you.</p>
-        <p>Paragraph 2 with more stuff about you.</p>
-
-        <h2><em>Past Experiences</em></h2>
-        <p>Paragraph 1 describing something you've accomplished in the past.</p>
-        <p>Paragraph 2 with another accomplishment</p>
-
-        <h2><em>Hobbies</em></h2>
-        <p>Paragraph 1 decribing your favorite hobby.</p>
-        <p>Paragraph 2 describing another hobby.</p>
-
-        <hr>
-
+        <nav id="desktop-nav">
+            <div class="logo">Kelvin Saldana</div>
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact </a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id = "hamburger-nav">
+            <div class="logo">Kelvin Saldana</div> 
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact </a></li>
+                </div>
+            </div>
+        </nav>
+        <section id="profile">
+            <div class="section__pic-container">
+                <img src="./assets/profile-pic.jpg" alt="Kelvin Saldana profile picture" />
+            </div>
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>    
+                <h1 class="title">Kelvin Saldana</h1>
+                <p class="section__text__p2">Full Stack Developer</p>
+                <div class="btn-container ">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/kelvin_resume.pdf')">
+                    Download CV
+                    </button>
+                    <button class="btn btn-color-1" 
+                    onclick="location.href='./# contact'">
+                        Contact Info
+                        </button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" 
+                    alt="My Linkedln Profile"
+                    class="icon" 
+                    onclick="location.href='https://www.linkedin.com/in/kelvinsaldana/'"
+                    />
+                    <img src="./assets/github.png" 
+                    alt="My Github Profile"
+                    class="icon" 
+                    onclick="location.href='https://github.com/kelveloper'"
+                    /> 
+                </div>
+            </div>
+        </section>
+        <script src="script.js "></script>
     </body>
 </html>
