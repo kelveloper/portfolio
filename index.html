@@ -4,11 +4,14 @@ Name: Kelvin Saldana
 Date Created: 01/12/2024
 Most recent revision: 05/05/2024
  -->
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kelvin's Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="mediaqueries.css">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="mediaqueries.css"/>
     </head>
     <body>
         <nav id="desktop-nav">
@@ -18,12 +21,12 @@ Most recent revision: 05/05/2024
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact </a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        <nav id = "hamburger-nav">
-            <div class="logo">Kelvin Saldana</div> 
+        <nav id="hamburger-nav">
+            <div class="logo">Kelvin Saldana</div>
             <div class="hamburger-menu">
                 <div class="hamburger-icon" onclick="toggleMenu()">
                     <span></span>
@@ -34,7 +37,7 @@ Most recent revision: 05/05/2024
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
                     <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
                     <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact </a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </div>
             </div>
         </nav>
@@ -47,29 +50,34 @@ Most recent revision: 05/05/2024
                 />
             </div>
             <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>    
+                <p class="section__text__p1">Hello, I'm</p>
                 <h1 class="title">Kelvin Saldana</h1>
                 <p class="section__text__p2">Full Stack Developer</p>
-                <div class="btn-container ">
-                    <button class="btn btn-color-2" onclick="window.open('./assets/kelvin_resume.pdf')">
+                <div class="btn-container">
+                    <button 
+                    class="btn btn-color-2" 
+                    onclick="window.open('./assets/kelvin_resume.pdf')"
+                    >
                     Download CV
                     </button>
                     <button class="btn btn-color-1" 
-                    onclick="location.href='./# contact'">
+                    onclick="location.href='./#contact'">
                         Contact Info
                         </button>
                 </div>
                 <div id="socials-container">
-                    <img src="./assets/linkedin.png" 
+                    <img 
+                    src="./assets/linkedin.png" 
                     alt="My Linkedln Profile"
                     class="icon" 
                     onclick="location.href='https://www.linkedin.com/in/kelvinsaldana/'"
                     />
-                    <img src="./assets/github.png" 
+                    <img 
+                    src="./assets/github.png" 
                     alt="My Github Profile"
-                    class="icon" 
+                    class="icon"
                     onclick="location.href='https://github.com/kelveloper'"
-                    /> 
+                    />
                 </div>
             </div>
         </section>
@@ -130,12 +138,12 @@ Most recent revision: 05/05/2024
           <div class="experience-details-container"> 
             <div class="about-containers">
               <div class="details-container">
-                <h2 class="experience-sub-title"> Frontend Development</h2>
+                <h2 class="experience-sub-title">Frontend Development</h2>
                 <div class="article-container">
                   <article>
                     <img 
                     src="./assets/checkmark.png" 
-                    alt="experience icon "
+                    alt="experience icon"
                     class="icon" 
                     />
                     <div>
@@ -146,7 +154,7 @@ Most recent revision: 05/05/2024
                   <article>
                     <img 
                     src="./assets/checkmark.png" 
-                    alt="experience icon "
+                    alt="experience icon"
                     class="icon" 
                     />
                     <div>
@@ -157,7 +165,7 @@ Most recent revision: 05/05/2024
                   <article>
                     <img 
                     src="./assets/checkmark.png" 
-                    alt="experience icon "
+                    alt="experience icon"
                     class="icon" 
                     />
                     <div>
@@ -168,7 +176,7 @@ Most recent revision: 05/05/2024
                   <article>
                     <img 
                     src="./assets/checkmark.png" 
-                    alt="experience icon "
+                    alt="experience icon"
                     class="icon" 
                     />
                     <div>
@@ -179,7 +187,7 @@ Most recent revision: 05/05/2024
                   <article>
                     <img 
                     src="./assets/checkmark.png" 
-                    alt="experience icon "
+                    alt="experience icon"
                     class="icon" 
                     />
                     <div>
@@ -262,11 +270,123 @@ Most recent revision: 05/05/2024
           <p class="section__text__p1">Browse My Recent</p>
           <h1 class="title">Projects</h1>
           <div class="experience-details-container">
+            <div class="about-containers"> 
             <div class="details-container color-container">
-              <img src="" alt="">
+              <div class="article-container">
+                <img 
+                src="./assets/project-1.png" 
+                alt="Project 1"
+                class="project-img"
+                />
+              </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Github 
+              </button>
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Live Demo 
+              </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img 
+                src="./assets/project-2.png" 
+                alt="Project 2"
+                class="project-img"
+                />
+              </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Github 
+              </button>
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Live Demo 
+              </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img 
+                src="./assets/project-3.png" 
+                alt="Project 3"
+                class="project-img"
+                />
+              </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Github 
+              </button>
+              <button 
+              class="btn btn-color-2 project-btn" 
+              onclick="location.href='https://github.com/kelveloper'"
+              >
+                Live Demo 
+              </button>
+              </div>
+            </div>
+           </div>
+          </div>
+          <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#projects'"
+          />
+        </section>
+        <section id="contact">
+          <p class="section__text__p1">Get in Touch</p>
+          <h1 class="title">Contact Me</h1>
+          <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+              <img 
+              src="./assets/email.png" 
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+              />
+              <p><a href="mailto:kelvinsaldana98@gmail.com ">kelvinsaldana@gmail.com </a></p>
+            </div>
+            <div class="contact-info-container">
+              <img 
+              src="./assets/linkedin.png" 
+              alt="Linkedin icon"
+              class="icon contact-icon"
+              />
+              <p><a href="https://www.linkedin.com/in/kelvinsaldana/">Linkedln</a></p>
             </div>
           </div>
         </section>
-        <script src="script.js "></script>
+        <footer> 
+          <nav>
+            <div class="nav-links-container">
+              <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+          <p>Copyright &#169; 2024 Kelveloper. All Rights Reserved.</p>
+        </footer>
+        <script src="script.js"></script>
     </body>
 </html>
