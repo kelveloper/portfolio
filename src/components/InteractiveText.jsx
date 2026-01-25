@@ -63,9 +63,6 @@ const InteractiveText = ({
     };
 
     useEffect(() => {
-        // Initial scramble on load
-        scramble();
-
         let autoGlitchTimer;
         if (enableAutoGlitch) {
             autoGlitchTimer = setInterval(() => {
