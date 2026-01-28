@@ -21,10 +21,16 @@ const ChallengeMe = () => {
             color: 'var(--text-primary)',
             minHeight: '70vh',
             display: 'flex',
-            flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center'
-        }}>
+        }} className="alternating-section challenge-section">
+            <style>{`
+                @media (max-width: 768px) {
+                    .challenge-section {
+                        padding: 4rem 1rem !important;
+                    }
+                }
+            `}</style>
             {/* Subheading */}
             <h3 className="challenge-subheading" style={{
                 fontSize: '1.2rem',

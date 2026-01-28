@@ -21,7 +21,16 @@ const Contact = () => {
             flexDirection: 'column',
             justifyContent: 'flex-end', // Push to bottom, but padding lifts it
             alignItems: 'center'
-        }}>
+        }} className="contact-section">
+            <style>{`
+                @media (max-width: 768px) {
+                    .contact-section {
+                        padding: 4rem 1rem 6rem !important; /* increased bottom padding for mobile browsers */
+                        justify-content: center !important;
+                        min-height: auto !important; /* let it grow naturally */
+                    }
+                }
+            `}</style>
             {/* Contact Heading */}
             <div style={{ marginBottom: '2rem' }}>
                 <h3 style={{

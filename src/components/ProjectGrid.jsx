@@ -207,7 +207,14 @@ const ProjectGrid = () => {
             padding: '4rem 2rem 8rem',
             backgroundColor: 'transparent',
             color: 'inherit'
-        }}>
+        }} className="project-section">
+            <style>{`
+                @media (max-width: 768px) {
+                    .project-section {
+                        padding: 2rem 1rem 4rem !important;
+                    }
+                }
+            `}</style>
             <div style={{
                 maxWidth: '1200px',
                 margin: '0 auto'
@@ -224,7 +231,7 @@ const ProjectGrid = () => {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', // Slightly wider cards for better layout
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', // Smaller min-width for mobile
                     gap: '2rem'
                 }}>
                     {projects.map((project, index) => (

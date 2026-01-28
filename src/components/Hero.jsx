@@ -223,10 +223,18 @@ const Hero = () => {
           .hero-content {
             grid-template-columns: 1fr !important;
             text-align: center;
+            margin-top: 4rem; /* Add spacing for fixed mobile nav or just visual breathing room */
           }
           .hero-image {
             order: -1;
             margin-bottom: 2rem;
+          }
+          /* Ensure title sizes are readable on mobile */
+          h1 {
+            font-size: 2.5rem !important;
+          }
+          h2 {
+            font-size: 1.2rem !important;
           }
         }
       `}</style>

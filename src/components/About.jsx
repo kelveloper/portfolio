@@ -12,7 +12,14 @@ const About = () => {
             maxWidth: '800px',
             margin: '0 auto',
             textAlign: 'center'
-        }}>
+        }} className="about-section">
+            <style>{`
+                @media (max-width: 768px) {
+                    .about-section {
+                        padding: 5rem 1rem !important;
+                    }
+                }
+            `}</style>
             <h2 style={{
                 fontSize: '2.5rem',
                 fontWeight: '700',

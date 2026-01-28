@@ -82,6 +82,7 @@ const Footer = ({ onDoNotTouch }) => {
                 }}
                 onMouseEnter={() => setIsButtonHovered(true)}
                 onMouseLeave={() => setIsButtonHovered(false)}
+                className="do-not-touch-container"
             >
                 {/* The Physical Button */}
                 <button
@@ -143,6 +144,20 @@ const Footer = ({ onDoNotTouch }) => {
                 }
                 .footer-nav-link:hover::after {
                     width: 100%;
+                }
+                @media (max-width: 768px) {
+                    footer ul {
+                        gap: 1.5rem !important;
+                        flex-direction: column;
+                    }
+                    /* Adjust button position if needed, or keep it relative */
+                    .do-not-touch-container {
+                        position: relative !important;
+                        bottom: auto !important;
+                        right: auto !important;
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
+                    }
                 }
             `}</style>
         </footer>

@@ -4,6 +4,7 @@ import InteractiveText from './InteractiveText';
 const Navbar = () => {
     const [hoverCount, setHoverCount] = useState(0);
     const [showEasterEgg, setShowEasterEgg] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const resetTimerRef = useRef(null);
 
     const handleLogoHover = () => {
@@ -56,8 +57,9 @@ const Navbar = () => {
                     width: '120px', // Fixed width for stability
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: showEasterEgg ? 'center' : 'flex-start', // Center 67, left-align text
-                    height: '40px'
+                    justifyContent: showEasterEgg ? 'center' : 'flex-start',
+                    height: '40px',
+                    zIndex: 102 // Ensure logo is above mobile menu
                 }}
             >
                 {showEasterEgg ? (
@@ -75,8 +77,15 @@ const Navbar = () => {
                 )}
             </div>
 
+            {/* Hamburger Menu Icon */}
+            <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                <div className={`line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+                <div className={`line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+                <div className={`line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+            </div>
+
             {/* Links */}
-            <ul style={{
+            <ul className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`} style={{
                 display: 'flex',
                 gap: '3rem',
                 listStyle: 'none',
@@ -101,6 +110,7 @@ const Navbar = () => {
                                     // "About" looks better centered, others align to top
                                     const blockAlign = item === 'About' ? 'center' : 'start';
                                     element.scrollIntoView({ behavior: 'smooth', block: blockAlign });
+                                    setIsMobileMenuOpen(false); // Close menu on click
                                 }
                             }}
                             className="nav-link"
@@ -148,9 +158,65 @@ const Navbar = () => {
                     100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
                 }
                 @media (max-width: 768px) {
-                    nav ul {
-                        display: none !important; 
+                    nav {
+                        padding: 2rem !important;
                     }
+                    .hamburger {
+                        display: flex !important;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        width: 2rem;
+                        height: 2rem;
+                        cursor: pointer;
+                        z-index: 102;
+                    }
+                    .line {
+                        width: 2rem;
+                        height: 0.25rem;
+                        background: var(--text-primary);
+                        border-radius: 10px;
+                        transition: all 0.3s linear;
+                        position: relative;
+                        transform-origin: 1px;
+                    }
+                    .line.open:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+                    .line.open:nth-child(2) {
+                        opacity: 0;
+                        transform: translateX(20px);
+                    }
+                    .line.open:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+
+                    .nav-links {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        height: 100vh;
+                        width: 100%;
+                        background: var(--bg-primary);
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        transform: translateX(100%);
+                        transition: transform 0.3s ease-in-out;
+                        z-index: 101;
+                    }
+                    .nav-links.open {
+                        transform: translateX(0);
+                    }
+                    .nav-links li {
+                        opacity: 0;
+                        transition: opacity 0.5s ease-in-out;
+                    }
+                    .nav-links.open li {
+                        opacity: 1;
+                    }
+                }
+                .hamburger {
+                    display: none;
                 }
             `}</style>
         </nav>
