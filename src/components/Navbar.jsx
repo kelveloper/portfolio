@@ -159,8 +159,14 @@ const Navbar = () => {
                 }
                 @media (max-width: 768px) {
                     nav {
-                        padding: 2rem !important;
+                        padding: 1.5rem !important; /* Slightly reduced padding */
+                        justify-content: center !important; /* Center the logo */
                     }
+                    /* Logo adjustment if needed */
+                    nav > div:first-child {
+                        /* text-align: center; if needed, but flex center handles it */
+                    }
+
                     .hamburger {
                         display: flex !important;
                         flex-direction: column;
@@ -169,11 +175,15 @@ const Navbar = () => {
                         height: 2rem;
                         cursor: pointer;
                         z-index: 102;
+                        position: absolute; /* Absolute position */
+                        right: 1.5rem; /* Match padding */
+                        top: 50%;
+                        transform: translateY(-50%);
                     }
                     .line {
                         width: 2rem;
                         height: 0.25rem;
-                        background: var(--text-primary);
+                            background: var(--text-primary);
                         border-radius: 10px;
                         transition: all 0.3s linear;
                         position: relative;

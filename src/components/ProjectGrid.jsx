@@ -90,7 +90,7 @@ const ProjectCard = ({ project }) => {
                 flex: 1,
                 display: 'flex',
                 flexDirection: 'column'
-            }}>
+            }} className="project-card-content">
                 <h3 style={{
                     fontSize: '1.25rem',
                     fontWeight: '600',
@@ -110,7 +110,7 @@ const ProjectCard = ({ project }) => {
                     gap: '0.5rem',
                     flexWrap: 'wrap',
                     marginBottom: '1.5rem'
-                }}>
+                }} className="project-tags">
                     {project.tags.map(tag => (
                         <span key={tag} style={{
                             fontSize: '0.85rem',
@@ -124,7 +124,7 @@ const ProjectCard = ({ project }) => {
                     ))}
                 </div>
 
-                <div style={{ marginTop: 'auto', paddingTop: '0.5rem', display: 'flex', gap: '1rem' }}>
+                <div style={{ marginTop: 'auto', paddingTop: '0.5rem', display: 'flex', gap: '1rem' }} className="project-links">
                     <div className="project-tooltip-container">
                         <a href={project.link}
                             target="_blank"
@@ -212,6 +212,14 @@ const ProjectGrid = () => {
                 @media (max-width: 768px) {
                     .project-section {
                         padding: 2rem 1rem 4rem !important;
+                    }
+                    /* Center alignment for project cards on mobile */
+                    .project-card-content {
+                        align-items: center !important;
+                        text-align: center !important;
+                    }
+                    .project-tags, .project-links {
+                        justify-content: center !important;
                     }
                 }
             `}</style>

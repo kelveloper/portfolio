@@ -15,19 +15,26 @@ const ChallengeMe = () => {
     };
 
     return (
-        <section id="challenge-section" className="alternating-section" style={{
+        <section id="challenge-section" className="alternating-section challenge-section" style={{
             padding: '6rem 2rem',
             textAlign: 'center',
             color: 'var(--text-primary)',
             minHeight: '70vh',
             display: 'flex',
+            flexDirection: 'column', // Stack vertically by default
             justifyContent: 'center',
             alignItems: 'center'
-        }} className="alternating-section challenge-section">
+        }}>
             <style>{`
                 @media (max-width: 768px) {
                     .challenge-section {
                         padding: 4rem 1rem !important;
+                        flex-direction: column !important; /* Ensure vertical stacking */
+                    }
+                    /* Ensure children take full width */
+                    .challenge-section > * {
+                        width: 100% !important;
+                        max-width: 100% !important;
                     }
                 }
             `}</style>
@@ -127,7 +134,7 @@ const ChallengeMe = () => {
                     Let's Build Something
                 </button>
             </div>
-        </section>
+        </section >
     );
 };
 
